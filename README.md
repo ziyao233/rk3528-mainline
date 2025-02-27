@@ -6,7 +6,8 @@ I'm currently working on upstream support for RK3528 SoC.
 
 ### Components that may involve driver changes
 
-- clock and reset driver (CRU): under review [v2](https://lore.kernel.org/all/20250108114605.1960-2-ziyao@disroot.org/) 2025.01.08
+- clock and reset driver (CRU): Accepted [v3](https://lore.kernel.org/all/20250217061142.38480-5-ziyao@disroot.org/)
+  2025.02.27, should land in v6.15
 - gpio and pinctrl: N/A
 - mmc: N/A
 - internal gmac: N/A
