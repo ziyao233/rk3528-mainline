@@ -24,20 +24,25 @@ are currently working on upstream support for RK3528 SoC.
   - DTS changes are merged into LED/button series
     ("rockchip: Add support for leds and buttons on Radxa E20C")
 - SDHCI: Jonas Karlman, merged [v1](https://lore.kernel.org/all/20250305214108.1327208-1-jonas@kwiboo.se/)
-  on 2025.03.12, should land in v6.16
+  on 2025.03.12, should land in v6.15
   - HS400 mode: N/A
-- SD/SDIO: Yao Zi, under review [v3](https://lore.kernel.org/all/20250309055348.9299-1-ziyao@disroot.org/)
-  on 2025.03.09
+- SD/SDIO: Yao Zi, under review [v4](https://lore.kernel.org/all/20250417143647.43860-1-ziyao@disroot.org/)
+  on 2025.04.17
 - internal gmac: Jonas Karlman
+  - depends on a clean up series, under review [v2](https://lore.kernel.org/all/20250308213720.2517944-1-jonas@kwiboo.se/)
+    on 2025.03.08
   - driver changes, under review [v2](http://lore.kernel.org/20250309232622.1498084-1-jonas@kwiboo.se)
     on 2025.03.09
   - DTS changes, under review [v2](https://lore.kernel.org/all/20250310001254.1516138-1-jonas@kwiboo.se/)
     on 2025.03.10
 - USB 2.0: Jonas Karlman, in progress
+- OTP: Jonas Karlman, in progress
+- TSADC: Jonas Karlman, in progress
+- Hantro 1080P decoder: Jonas Karlman, in progress
+- GPU: Jonas Karlman, in progress
 - PCIe: Yao Zi, in progress
-- Power Domain: N/A
 - VOP: N/A
-- GPU: N/A
+- Power Domain: N/A
 
 ### Componenets that require dt(-binding) changes only
 
@@ -46,21 +51,23 @@ are currently working on upstream support for RK3528 SoC.
 - QoS (Quality of Service) syscons: @aiamadeus, merged [v2](https://lore.kernel.org/all/20250306123809.273655-1-amadeus@jmu.edu.cn/)
   on 2025.03.08, should land in v6.15
 - LED/Buttons: Jonas Karlman, merged, [v2](https://lore.kernel.org/all/20250304201642.831218-1-jonas@kwiboo.se/)
-  on 2025.03.08, should land in v6.16
-- pwm: @aiamadeus, merged [v1](https://lore.kernel.org/all/20250307120004.959980-1-amadeus@jmu.edu.cn/)
-  on 2025.03.12, should land in v6.16
-- i2c: Yao Zi, under review [v1](https://lore.kernel.org/all/20250309070603.35254-1-ziyao@disroot.org/)
-  on 2025.03.09
-- thermal sensor: Yao Zi, in progress
+  on 2025.03.08, should land in v6.15
+- pwm: @aiamadeus
+  - reverted [v1](https://lore.kernel.org/all/20250307120004.959980-1-amadeus@jmu.edu.cn/)
+    had been merged on 2025.03.12
+  - under review [v3](https://lore.kernel.org/all/20250401120020.976343-1-amadeus@jmu.edu.cn/)
+    on 2025.04.01
+- i2c: Yao Zi, under review [v2](https://lore.kernel.org/all/20250417120118.17610-3-ziyao@disroot.org/)
+  on 2025.04.17
+- sfc: Yao Zi, in progress
 - spi: N/A
 - watchdog: N/A
-- sfc: N/A
 - rng: N/A
 
 ## U-Boot
 
-- Jonas Karlman, under review [v1](https://lore.kernel.org/u-boot/20250123224844.3104592-1-jonas@kwiboo.se/)
-  on 2025.01.23
+- Jonas Karlman, under review [v2](https://lore.kernel.org/all/20250407224743.2423921-1-jonas@kwiboo.se/)
+  on 2025.04.07
   - clk
   - pinctrl
   - rng
@@ -106,5 +113,7 @@ are currently working on upstream support for RK3528 SoC.
 
 - [Rockchip Linux tree](https://github.com/rockchip-linux/kernel)
 - [Rockchip BL binaries (rkbin)](https://github.com/rockchip-linux/rkbin/)
-- `rk3528/`-prefixed branches on
+- `rk3528/`-prefixed branches in
   [my kernel tree](https://github.com/ziyao233/linux)
+- `rk3528`-suffixed branches in
+  [Jonas Karlman's kernel tree](https://github.com/Kwiboo/linux-rockchip/)
