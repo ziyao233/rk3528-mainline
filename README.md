@@ -26,8 +26,8 @@ are currently working on upstream support for RK3528 SoC.
 - SDHCI: Jonas Karlman, merged [v1](https://lore.kernel.org/all/20250305214108.1327208-1-jonas@kwiboo.se/)
   on 2025.03.12, should land in v6.15
   - HS400 mode: N/A
-- SD/SDIO: Yao Zi, under review [v4](https://lore.kernel.org/all/20250417143647.43860-1-ziyao@disroot.org/)
-  on 2025.04.17
+- SD/SDIO: Yao Zi, under review [v5](https://lore.kernel.org/all/20250506092206.46143-1-ziyao@disroot.org/)
+  on 2025.05.06
 - internal gmac: Jonas Karlman
   - depends on a clean up series, under review [v2](https://lore.kernel.org/all/20250308213720.2517944-1-jonas@kwiboo.se/)
     on 2025.03.08
@@ -40,9 +40,10 @@ are currently working on upstream support for RK3528 SoC.
 - TSADC: Jonas Karlman, in progress
 - Hantro 1080P decoder: Jonas Karlman, in progress
 - GPU: Jonas Karlman, in progress
-- PCIe: Yao Zi, in progress
-- VOP: N/A
-- Power Domain: N/A
+- VOP: Jonas Karlman, in progress
+- PCIe combined phy: Yao Zi, in progress
+- Power Domain: Yao Zi, in progress
+- PCIe controller: Yao Zi, in progress
 
 ### Componenets that require dt(-binding) changes only
 
@@ -55,10 +56,10 @@ are currently working on upstream support for RK3528 SoC.
 - pwm: @aiamadeus
   - reverted [v1](https://lore.kernel.org/all/20250307120004.959980-1-amadeus@jmu.edu.cn/)
     had been merged on 2025.03.12
-  - under review [v3](https://lore.kernel.org/all/20250401120020.976343-1-amadeus@jmu.edu.cn/)
-    on 2025.04.01
-- i2c: Yao Zi, under review [v2](https://lore.kernel.org/all/20250417120118.17610-3-ziyao@disroot.org/)
-  on 2025.04.17
+  - merged [v3](https://lore.kernel.org/all/20250401120020.976343-1-amadeus@jmu.edu.cn/)
+    on 2025.05.06, should land in 6.16
+- i2c: Yao Zi, merged [v2](https://lore.kernel.org/all/20250417120118.17610-3-ziyao@disroot.org/)
+  on 2025.05.05, should land in v6.16
 - sfc: Yao Zi, in progress
 - spi: N/A
 - watchdog: N/A
@@ -66,8 +67,8 @@ are currently working on upstream support for RK3528 SoC.
 
 ## U-Boot
 
-- Jonas Karlman, under review [v2](https://lore.kernel.org/all/20250407224743.2423921-1-jonas@kwiboo.se/)
-  on 2025.04.07
+- Jonas Karlman, merged [v2](https://lore.kernel.org/all/20250407224743.2423921-1-jonas@kwiboo.se/)
+  on 2025.04.23, should land in v2025.07
   - clk
   - pinctrl
   - rng
@@ -108,6 +109,32 @@ are currently working on upstream support for RK3528 SoC.
   - With HDMI and Audio (!!!)
   - [Wiki page](https://docs.armsom.org/armsom-sige1)
   - [Schematic](https://drive.google.com/drive/folders/15uvc2lcOAKP0enXezASUhVFLuzkq3IEX)
+
+- Radxa Rock 2A
+  - 1/2/4 GiB RAM
+  - Optional EMMC
+  - One GbE port
+  - 3 x USB 2.0
+  - PCIe 2.0 x 1 lane
+  - USB 3.0
+  - With HDMI and Audio (!!!)
+  - Optional WiFi/BT module
+  - [Wiki Page](https://docs.radxa.com/en/rock2/rock2a)
+  - [Schematic](https://dl.radxa.com/rock2/2a/v1.2/radxa_rock_2a_v1.2_schematic.pdf)
+  - Note: PCIe 2.0 and USB 3.0 share the same PHY thus the USB port can only
+    operate in 2.0 mode when PCIe is enabled.
+
+- Radxa Rock 2F
+  - 1/2/4 GiB RAM
+  - Optional EMMC
+  - HDMI and Audio (!!!)
+  - 2 USB 2.0 Type-A Host ports
+  - 1 USB 2.0 Type-C Host/OTG port
+  - PCIe 2.0 x 1 lane
+  - Optional WiFi/BT module
+  - No Ethernet port
+  - [Wiki Page](https://docs.radxa.com/en/rock2/rock2f)
+  - [Schematic](https://dl.radxa.com/rock2/2f/radxa_rock2f_v1.01_schematic.pdf)
 
 ## Resources
 
