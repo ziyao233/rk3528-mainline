@@ -39,12 +39,18 @@ fixes for minor issues!
     on 2025.03.25
   - DTS changes, merged [v3](https://lore.kernel.org/linux-rockchip/20250509202402.260038-1-jonas@kwiboo.se/)
     on 2025.05.10
-- Power Domain: Jonas Karlman, partially merged [v1](https://lore.kernel.org/linux-rockchip/175037106381.1530547.11103096217205983785.b4-ty@sntech.de/)
+- Power Domain: Jonas Karlman, [v2](https://lore.kernel.org/all/20250723085654.2273324-1-jonas@kwiboo.se)
   - merged in v1: dt-binding/driver/devicetree for the power controller,
   		  binding changes to allow power-domain properties for MMC
-- PCIe combined phy: Yao Zi, under review [v3](https://lore.kernel.org/linux-rockchip/20250519161612.14261-1-ziyao@disroot.org/)
-  on 2025.05.19
-- USB 2.0: Jonas Karlman, in progress
+  - Heiko follows up a PATCH to convert power-domains to use binding constants,
+    [v2](https://lore.kernel.org/all/20250620201715.1572609-1-heiko@sntech.de/)
+    merged on 2025.08.11, should land in v6.18
+  - merged in v2: GPIO/IIO/I2C changes for allowing usage of power-domain
+		  property.
+- PCIe combined phy: Yao Zi, merged [v5](https://lore.kernel.org/all/20250728102947.38984-2-ziyao@disroot.org/)
+  on 2025.08.12, should land in v6.18
+- USB 2.0: Jonas Karlman, under review [v1](https://lore.kernel.org/all/20250723122323.2344916-1-jonas@kwiboo.se)
+  on 2025.07.23
 - OTP: Jonas Karlman, in progress
 - TSADC: Jonas Karlman, in progress
 - Hantro 1080P decoder: Jonas Karlman, in progress
@@ -89,6 +95,19 @@ fixes for minor issues!
 - Explicitly claim HS200 support on Radxa E20C:
   Jonas Karlman, under review [v1](https://lore.kernel.org/linux-rockchip/20250621165832.2226160-1-jonas@kwiboo.se/)
   on 2025.06.21
+- Fixes DMA channel for UARTs:
+  Jonas Karlman, merged [v1](https://lore.kernel.org/r/20250709210831.3170458-1-jonas@kwiboo.se
+)
+  on 2025.07.15, should land in v6.16
+
+### Board Devicetrees
+
+- Rock 2A/2F, FriendlyElec NanoPi Zero2: Jonas Karlman,
+  under review [v4](https://lore.kernel.org/all/20250717103720.2853031-1-jonas@kwiboo.se/)
+  on 2025.07.17
+- Radxa E24C: Jonas Karlman,
+  under review [v1](https://lore.kernel.org/all/20250727144409.327740-1-jonas@kwiboo.se)
+  on 2025.07.27
 
 ## U-Boot
 
