@@ -39,7 +39,7 @@ fixes for minor issues!
     on 2025.03.25
   - DTS changes, merged [v3](https://lore.kernel.org/linux-rockchip/20250509202402.260038-1-jonas@kwiboo.se/)
     on 2025.05.10
-- Power Domain: Jonas Karlman, [v2](https://lore.kernel.org/all/20250723085654.2273324-1-jonas@kwiboo.se)
+- Power Domain: Jonas Karlman, [v3](https://lore.kernel.org/all/20250821211843.3051349-1-jonas@kwiboo.se/)
   - merged in v1: dt-binding/driver/devicetree for the power controller,
   		  binding changes to allow power-domain properties for MMC
   - Heiko follows up a PATCH to convert power-domains to use binding constants,
@@ -47,15 +47,18 @@ fixes for minor issues!
     merged on 2025.08.11, should land in v6.18
   - merged in v2: GPIO/IIO/I2C changes for allowing usage of power-domain
 		  property.
+  - VNEC, VO and VPU domains are enabled in v3. Merged on 2025.08.24, should
+    land in v6.18
 - PCIe combined phy: Yao Zi, merged [v5](https://lore.kernel.org/all/20250728102947.38984-2-ziyao@disroot.org/)
   on 2025.08.12, should land in v6.18
+- PCIe controller: Yao Zi, [v1](https://lore.kernel.org/all/20250906135246.19398-1-ziyao@disroot.org/)
+  under review on 2025.09.06
 - USB 2.0: Jonas Karlman, under review [v1](https://lore.kernel.org/all/20250723122323.2344916-1-jonas@kwiboo.se)
   on 2025.07.23
 - OTP: Jonas Karlman, in progress
 - TSADC: Jonas Karlman, in progress
 - Hantro 1080P decoder: Jonas Karlman, in progress
 - VOP: Jonas Karlman, in progress
-- PCIe controller: Yao Zi, in progress
 
 ### Componenets that require dt(-binding) changes only
 
@@ -80,9 +83,11 @@ fixes for minor issues!
   on 2025.06.09, should land in v6.17
 - cpufreq: @aiamadeus, under review [v2](https://lore.kernel.org/linux-rockchip/20250620100010.1291658-1-amadeus@jmu.edu.cn/)
   on 2025.06.20
+- PCIe for FriendlyElec NanoPi Zero2: Yao Zi, in progress
 - sfc: Yao Zi, in progress
 - watchdog: N/A
 - rng: N/A
+- PCIe for Rock 2A: in progress
 
 ### Fixes
 
@@ -93,18 +98,22 @@ fixes for minor issues!
 - Move pinctrl node out of the SoC simple-bus: Heiko Stuebner, merged [v1](a37d21a9b45e47ed6bc1f94e738096c07db78a07)
   on 2025.05.19, should land in v6.16
 - Explicitly claim HS200 support on Radxa E20C:
-  Jonas Karlman, under review [v1](https://lore.kernel.org/linux-rockchip/20250621165832.2226160-1-jonas@kwiboo.se/)
-  on 2025.06.21
+  Jonas Karlman, merged [v1](https://lore.kernel.org/linux-rockchip/20250621165832.2226160-1-jonas@kwiboo.se/)
+  on 2025.06.30, should land in v6.17
 - Fixes DMA channel for UARTs:
   Jonas Karlman, merged [v1](https://lore.kernel.org/r/20250709210831.3170458-1-jonas@kwiboo.se
 )
   on 2025.07.15, should land in v6.16
+- dwmac-rk fix to avoid invalid pointer dereference: Yao Zi, [v1](https://lore.kernel.org/all/20250904031222.40953-3-ziyao@disroot.org/)
+  under review on 2025.09.04.
+  - It's still unclear whether it's appropriate to revert the problematic
+    commit or fix it up for now, since it's somehow hacking.
 
 ### Board Devicetrees
 
-- Rock 2A/2F, FriendlyElec NanoPi Zero2: Jonas Karlman,
-  under review [v4](https://lore.kernel.org/all/20250717103720.2853031-1-jonas@kwiboo.se/)
-  on 2025.07.17
+- Rock 2A/2F, FriendlyElec NanoPi Zero2, ArmSOM Sige1: Jonas Karlman,
+  merged [v4](https://lore.kernel.org/all/20250717103720.2853031-1-jonas@kwiboo.se/)
+  on 2025.08.30, should land in v6.18
 - Radxa E24C: Jonas Karlman,
   under review [v1](https://lore.kernel.org/all/20250727144409.327740-1-jonas@kwiboo.se)
   on 2025.07.27
